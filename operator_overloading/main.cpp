@@ -8,12 +8,20 @@ public:
     {
         double amount;
         cin >> amount;
-        cout << "You have successfully withdrawn: " << amount << endl;
+        if (amount < balance)
+        {
+            balance = balance - amount;
+        }
+        cout << "You have successfully withdrawn: R" << amount << " and the new balance after withdrawal is R" << balance << endl;
     }
-    void withdrawal(double balane, double amount)
+    void withdrawal(double balance, double amount)
     {
+        if (amount < balance)
+        {
+            balance = balance - amount;
+        }
 
-        cout << "You have successfully  withdrawn: " << amount << endl;
+        cout << "You have successfully  withdrawn: R" << amount << " and the new balance after withdrawal is R" << balance << endl;
     }
 };
 
