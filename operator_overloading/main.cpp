@@ -16,9 +16,12 @@ public:
     Bank operator-(int accountNumber)
     {
         Bank temp = *this;
+        if (accountNumber < this->numofBankAccounts)
+        {
 
-        temp.numofBankAccounts -= accountNumber;
-        cout << "The Number of account/s  remaining is: " << temp.numofBankAccounts << endl;
+            temp.numofBankAccounts -= accountNumber;
+            cout << "The Number of account/s  remaining is: " << temp.numofBankAccounts << endl;
+        }
         return temp;
     }
 };
